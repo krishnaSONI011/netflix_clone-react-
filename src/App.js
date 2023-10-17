@@ -1,6 +1,7 @@
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import './App.css';
-import Login from './pages/Login';
+import Auth from './pages/Auth';
+
 import Netflix from './pages/Netflix';
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
     <BrowserRouter>
     <Routes>
       <Route path='/' element={<Netflix/>}/>
-      <Route path='/login' element={<Login/>} />
+      <Route path='/auth/*' element={<Auth/>} ></Route>
     </Routes>
     </BrowserRouter>
     </>
