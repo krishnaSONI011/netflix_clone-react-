@@ -1,11 +1,21 @@
 import React,{useState} from 'react'
 import {LuChevronRight} from "react-icons/lu";
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios'
 export default function Signup() {
   const[email,setEmail]=useState('')
   const navigation = useNavigate()
-  const send = ()=>{
-    navigation(`/auth/new-user/${email}`);
+  // checking the email register or not .
+  const send =async ()=>{
+    try{
+      const response = await axios.post('http://localhost:8080/api/auth/check-user',{email});
+      if(response.data.status === true) navigation(`/auth/login/${email}`);
+      else if(!response.data.status) navigation( `/auth/new-user/${email}`);
+      console.log(response.data)
+    }catch(err){
+      console.log(err)
+    }
+  
   }
   return (
     <div className='flex justify-center items-center h-[80vh]'>

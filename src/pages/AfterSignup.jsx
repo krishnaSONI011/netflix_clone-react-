@@ -1,14 +1,26 @@
 import React,{useState} from "react";
-import {useParams} from 'react-router-dom'
+import {useParams,useNavigate} from 'react-router-dom'
+import axios from 'axios'
+import { useAuth } from "../context/loginContext";
 let AfterSignup= ()=>{
+    const [auth,setAuth] = useAuth()
+    let navigation = useNavigate()
     let {param} = useParams();
     const[name,setName] = useState('');
     const [email,setEmail] = useState(param);
     const[password,setPassword] = useState('');
 
-    const register = ()=>{
+    const register =async ()=>{
         try{
+            const response = await axios.post('http://localhost:8080/api/auth/register',{name,email,password});
+            if(response.data.status === true){ 
+                navigation('/')
+                setAuth({
+                    user:response.data.user
+                })
 
+                localStorage.setItem('auth',JSON.stringify(auth.user))
+        }
         }catch(err){
             console.log(err)
         }
