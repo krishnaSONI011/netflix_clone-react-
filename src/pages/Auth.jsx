@@ -16,6 +16,7 @@ export default function Auth() {
         <Routes>
 
         <Route path='/login' element={<Login/>}/>
+        <Route path='/login/:param' element={<Login/>}/>
         <Route path='/sign-up' element={<Signup/>}/>
         <Route path='/new-user/:param' element={<AfterSignup/>} /> 
         </Routes>
