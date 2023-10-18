@@ -1,5 +1,9 @@
 .bg{
     background-image: url('./assets/bg.jpg');
+   
     background-position: center;
     background-size: cover ;
+}
+.gradient{
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
 }
