@@ -1,3 +1,6 @@
+body{
+    background-color: black;
+}
 .bg{
     background-image: url('./assets/bg.jpg');
    
@@ -10,3 +13,10 @@
 .bg-2{
     background-image: linear-gradient(180deg,rgba(0,0,0,.7) 10%,transparent);
 }
+.bg-3{
+    background: linear-gradient(77deg,rgba(0,0,0,.6),transparent 85%);
+}
+.bg-4{background-color: rgba(109, 109, 110, 0.571); }
+.bg-4:hover{background-color: rgba(109, 109, 110, 0.329); }
+.bg-5{background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 61%, rgba(0,0,0,0.7) 100%);}

@@ -18,7 +18,7 @@ let MainHeader = ()=>{
     }
     return(
         <>
-        <div className={`${black ? 'bg-slate-900' : 'bg-2' } transition-all h-[70px] w-full fixed duration-700 flex`}>
+        <div className={`${black ? 'bg-slate-900' : 'bg-2' } transition-all h-[70px] w-full fixed duration-700 flex z-10`}>
             <div className="flex justify-between w-full items-center">
                 {/* left side */}
               <div className="flex items-center"> <div className="sm:hidden"><button><FiMenu className="text-white text-2xl"/></button></div> <img src={logo} alt="" className="w-32 "/></div> 
