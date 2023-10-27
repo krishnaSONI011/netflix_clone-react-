@@ -23,7 +23,7 @@ const CardSlider = props => {
                 <h1 className='text-white text-2xl font-semibold '>{props.title}</h1>
             </div>
             <div className='relative w-full flex h-full'>
-                <button className={`${show ? <></> :'hidden'} text-white text-2xl h-[150px] px-2    items-center flex bg-4 absolute left-0 z-10`} onClick={()=>setPosition(left - 100)}><LuChevronLeft/></button>
+                <button className={`${show ? <></> :'hidden'} text-white text-2xl h-[150px] px-2    items-center flex bg-4 absolute left-0 z-10`} onClick={()=>setPosition(left + 100)}><LuChevronLeft/></button>
                 <div className='overflow-hidden h-[250px] w-full flex items-baseline'>
                 <div className='relative z-0 transition-all duration-300 flex items-center' style={{left:`${left}px`}}>
                   {
@@ -35,7 +35,7 @@ const CardSlider = props => {
                 </div>
                 </div>
                
-                <button className='text-white text-2xl h-[150px] px-2    items-center flex bg-4 absolute right-0 z-10'onClick={()=>setPosition(left + 100)}><LuChevronRight/></button>
+                <button className='text-white text-2xl h-[150px] px-2    items-center flex bg-4 absolute right-0 z-10'onClick={()=>setPosition(left - 100)}><LuChevronRight/></button>
             </div>
         </div>
     )
