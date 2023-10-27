@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
-import image from '../assets/tile.jpg'
+
 import { HiPlay,HiHeart} from "react-icons/hi2";
-import {Link,useNavigate} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 const Card = (props) => {
   const navi = useNavigate()
 function videoPage(){

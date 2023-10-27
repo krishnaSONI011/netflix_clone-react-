@@ -1,6 +1,6 @@
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import './App.css';
-import CardSlider from './components/CardSlider';
+
 import { AuthProvider } from './context/loginContext';
 import Auth from './pages/Auth';
 
