@@ -1,5 +1,5 @@
 import React from 'react'
-import CardSlider from '../components/CardSlider'
+
 import HeroBanner from '../components/HeroBanner'
 import MainHeader from '../components/MainHeader'
 import { useNavigate } from 'react-router-dom'
