@@ -7,14 +7,16 @@ const CardSlider = props => {
     useEffect(()=>{
         async function fetch(){
             try{
-                let response = await axios.get('/video.json')
-                setData(response.data)
+                const param = props.category
+                console.log(param)
+                let response = await axios.get(`http://localhost:8080/api/movies/get/${props.category}`)
+                setData(response.data.data)
                 
             }catch(err){console.log(err)}
         }
         fetch()
     },[])
-    
+    console.log(data)
     const[left ,setPosition] = useState(100)
     const[show,setShow] = useState(false)
     return(
@@ -28,7 +30,7 @@ const CardSlider = props => {
                 <div className='relative z-0 transition-all duration-300 flex items-center' style={{left:`${left}px`}}>
                   {
                     data.map((tile)=>(
-                        <Card thum = {tile.thumbnailUrl} video={tile.videoUrl} key={tile.id}/>
+                        <Card thum = {tile.thumbnailURL} video={tile.videoURL} key={tile._id}/>
 
                     ))
                   }

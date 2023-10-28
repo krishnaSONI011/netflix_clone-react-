@@ -7,7 +7,7 @@ import { HiPlay,HiOutlineInformationCircle} from "react-icons/hi2";
 import CardSlider from './CardSlider';
 export default function HeroBanner() {
     const navigation = useNavigate()
-    const[title] = useState([{title:'Only On NetFlix'}])
+    const[title] = useState([{title:'Only On NetFlix',slug:"only-on-netflix"},{title:'All time Best',slug:"all-time-best"}])
   return (
     <div>
       <div className='md:block hidden relative z-0'>
@@ -26,7 +26,7 @@ export default function HeroBanner() {
             </div>
             <div className='w-full bg-5 h-[200px] '> 
             {title.map((t)=>(
-              <CardSlider title={t.title} key={t.title}/>     
+              <CardSlider title={t.title} key={t.title} category={t.slug}/>     
 
             ))}
             
