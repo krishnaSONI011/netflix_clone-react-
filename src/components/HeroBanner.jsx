@@ -48,6 +48,6 @@ export default function HeroBanner() {
          <div className='h-40 bg-5 w-full'></div>
         </div>
       </div>
-    </div>
+    </div> 
   );
 }
