@@ -1,10 +1,10 @@
 import React,{useState,useEffect} from "react";
 import logo from '../assets/logo.png'
 import profile from '../assets/pro.png'
-import { LuSearch } from "react-icons/lu";
 import { FiMenu,FiChevronDown } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import DropMenu from "./DropMenu";
+import Search from "./Search";
 let MainHeader = ()=>{
     const [show,setShow] = useState(false);
     const [black,setColor] = useState(false)
@@ -33,9 +33,9 @@ let MainHeader = ()=>{
               </div> 
 
               {/* right side */}
-                <div className="flex justify-evenly w-32">
+                <div className="flex justify-evenly w-48">
 
-                    <button><LuSearch className="text-white font-semibold text-xl"/></button>
+                   <Search/>
                     <div className="flex items-center relative py-3"  onClick={()=>show ? setShow(false) : setShow(true)}>
                         <img src={profile} alt="" className="mx-2"/>
                         <FiChevronDown className={`text-white text-xl transition-all ${show ? 'rotate-180': <></>}`}/>
