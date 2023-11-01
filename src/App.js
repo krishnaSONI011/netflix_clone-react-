@@ -2,7 +2,7 @@ import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import './App.css';
 
 import { AuthProvider } from './context/loginContext';
-import { movieProvider } from './context/movieData';
+
 import Auth from './pages/Auth';
 import Mainpage from './pages/Mainpage';
 import Player from './pages/Player';

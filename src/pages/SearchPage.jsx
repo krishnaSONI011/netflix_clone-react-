@@ -36,7 +36,7 @@ const SearchPage = props =>{
                 {
                     filterData.map((movie)=>(
                         
-                        <SearchCard name={movie.title} gerns={movie.gerns} des={movie.description} key={movie._id} image={movie.thumbnailURL} /> 
+                        <SearchCard name={movie.title} gerns={movie.gerns} des={movie.description} key={movie._id} image={movie.thumbnailURL} video={movie.videoURL}/> 
                     ))
                 }
             </div>
