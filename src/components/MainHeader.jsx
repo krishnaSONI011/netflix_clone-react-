@@ -33,7 +33,7 @@ let MainHeader = ()=>{
               </div> 
 
               {/* right side */}
-                <div className="flex justify-evenly w-48">
+                <div className="flex justify-evenly w-60">
 
                    <Search/>
                     <div className="flex items-center relative py-3"  onClick={()=>show ? setShow(false) : setShow(true)}>
