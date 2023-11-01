@@ -2,7 +2,9 @@ import React, { useState,useEffect } from 'react';
 import { LuChevronRight, LuChevronLeft } from 'react-icons/lu';
 import Card from './Card'; // Import your Card component
 import axios from 'axios';
+
 const CardSlider = props => {
+    
     let [data,setData] = useState([])
     useEffect(()=>{
         async function fetch(){
@@ -11,12 +13,13 @@ const CardSlider = props => {
                 console.log(param)
                 let response = await axios.get(`http://localhost:8080/api/movies/get/${props.category}`)
                 setData(response.data.data)
-                
+            
             }catch(err){console.log(err)}
         }
         fetch()
     },[])
-    console.log(data)
+    
+   
     const[left ,setPosition] = useState(100)
     const[show,setShow] = useState(false)
     return(
