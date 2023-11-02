@@ -11,7 +11,7 @@ function videoPage(){
 const [show,setShow] = useState(false)
   return (
     <div className="rounded-lg overflow-hidden shadow-md m-4 hover:scale-125 transition-transform hover:z-100 relative " onMouseEnter={()=>setShow(true)}onMouseLeave={()=>setShow(false)}>
-      <img src={`http://localhost:8080/${props.thum}`} alt={''} className="w-60 h-auto" />
+      <img src={`https://netflix-clone-backend-production-730c.up.railway.app/${props.thum}`} alt={''} className="w-60 h-auto" />
       <div className={`bg-slate-600 w-full py-2 ${show ? <span></span> : 'hidden' } rounded-b-lg`}>
         <div className='flex justify-evenly w-32 items-center mb-2 '>
           <button className='bg-white p-2 rounded-full' onClick={videoPage}><HiPlay/></button>

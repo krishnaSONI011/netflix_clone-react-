@@ -11,7 +11,7 @@ const CardSlider = props => {
             try{
                 const param = props.category
                 console.log(param)
-                let response = await axios.get(`http://localhost:8080/api/movies/get/${props.category}`)
+                let response = await axios.get(`https://netflix-clone-backend-production-730c.up.railway.app/api/movies/get/${props.category}`)
                 setData(response.data.data)
             
             }catch(err){console.log(err)}

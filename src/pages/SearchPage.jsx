@@ -10,7 +10,7 @@ const SearchPage = props =>{
 
         async function fetchData() {
           try {
-            const response = await axios.get('http://localhost:8080/api/movies/get');
+            const response = await axios.get('https://netflix-clone-backend-production-730c.up.railway.app/api/movies/get');
             setMovies(response.data.data);
           } catch (err) {
             console.error(err);

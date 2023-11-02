@@ -12,7 +12,7 @@ let AfterSignup= ()=>{
 
     const register =async ()=>{
         try{
-            const response = await axios.post('http://localhost:8080/api/auth/register',{name,email,password});
+            const response = await axios.post('https://netflix-clone-backend-production-730c.up.railway.app/api/auth/register',{name,email,password});
             if(response.data.status === true){ 
                 navigation('/')
                 setAuth({

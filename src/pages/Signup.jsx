@@ -8,7 +8,7 @@ export default function Signup() {
   // checking the email register or not .
   const send =async ()=>{
     try{
-      const response = await axios.post('http://localhost:8080/api/auth/check-user',{email});
+      const response = await axios.post('https://netflix-clone-backend-production-730c.up.railway.app/api/auth/check-user',{email});
       if(response.data.status === true) navigation(`/auth/login/${email}`);
       else if(!response.data.status) navigation( `/auth/new-user/${email}`);
       console.log(response.data)

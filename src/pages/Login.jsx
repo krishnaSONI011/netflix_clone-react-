@@ -11,7 +11,7 @@ const[password,setPassword]=useState('');
 const [error,seterror] = useState({password:'',user:''})
 async function log(){
   try{
-   const response = await axios.post('http://localhost:8080/api/auth/login',{email,password});
+   const response = await axios.post('https://netflix-clone-backend-production-730c.up.railway.app/api/auth/login',{email,password});
    if(response.data.status) {
       setAuth(response.data.user)
       localStorage.setItem('auth',JSON.stringify(auth))

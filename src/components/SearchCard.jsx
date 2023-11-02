@@ -11,7 +11,7 @@ const SearchCard =props=>{
         <div className="flex justify-center border-b-white border-b py-10">
             <div className='flex justify-around w-full'>
             <div>
-                <img src={`http://localhost:8080/${props.image}`} alt="" className='rounded'/>
+                <img src={`https://netflix-clone-backend-production-730c.up.railway.app/${props.image}`} alt="" className='rounded'/>
             </div>
             <div className='flex  w-2/3 flex-col justify-between'>
                 <h1 className='text-white text-3xl font-semibold'>{props.name}</h1>
